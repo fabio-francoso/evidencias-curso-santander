@@ -1,7 +1,5 @@
-# evidencias-curso-santander
-Repositorio criado para compartilhar as evidencias do curso Santander - Cibersegurança 2025
-
 # SIMULANDO UM ATAQUE DE BRUTE FORCE COM NMAP E MEDUSA
+### Repositorio criado para compartilhar as evidencias do curso Santander - Cibersegurança 2025
 
 1.	**Varredura de portas e versão do serviço**
 
@@ -43,26 +41,26 @@ Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: U
 
 'nmap -v -p22 --script=ssh-auth-methods -Pn 192.168.200.20' <br/>
 
-Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-04 06:51 -03
-NSE: Loaded 1 scripts for scanning.
-NSE: Script Pre-scanning.
-Initiating NSE at 06:51
-Completed NSE at 06:51, 0.00s elapsed
-Initiating ARP Ping Scan at 06:51
-Scanning 192.168.200.20 [1 port]
-Completed ARP Ping Scan at 06:51, 0.07s elapsed (1 total hosts)
-Initiating Parallel DNS resolution of 1 host. at 06:51
-Completed Parallel DNS resolution of 1 host. at 06:51, 0.00s elapsed
-Initiating SYN Stealth Scan at 06:51
-Scanning 192.168.200.20 (192.168.200.20) [1 port]
-Discovered open port 22/tcp on 192.168.200.20
-Completed SYN Stealth Scan at 06:51, 0.02s elapsed (1 total ports)
-NSE: Script scanning 192.168.200.20.
-Initiating NSE at 06:51
-Completed NSE at 06:51, 0.10s elapsed
-Nmap scan report for 192.168.200.20 (192.168.200.20)
-Host is up (0.00028s latency).
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower. <br/>
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-04 06:51 -03 <br/>
+NSE: Loaded 1 scripts for scanning. <br/>
+NSE: Script Pre-scanning. <br/>
+Initiating NSE at 06:51 <br/>
+Completed NSE at 06:51, 0.00s elapsed <br/>
+Initiating ARP Ping Scan at 06:51 <br/>
+Scanning 192.168.200.20 [1 port] <br/>
+Completed ARP Ping Scan at 06:51, 0.07s elapsed (1 total hosts) <br/>
+Initiating Parallel DNS resolution of 1 host. at 06:51 <br/>
+Completed Parallel DNS resolution of 1 host. at 06:51, 0.00s elapsed <br/>
+Initiating SYN Stealth Scan at 06:51 <br/>
+Scanning 192.168.200.20 (192.168.200.20) [1 port] <br/>
+Discovered open port 22/tcp on 192.168.200.20 <br/>
+Completed SYN Stealth Scan at 06:51, 0.02s elapsed (1 total ports) <br/>
+NSE: Script scanning 192.168.200.20. <br/>
+Initiating NSE at 06:51 <br/>
+Completed NSE at 06:51, 0.10s elapsed <br/>
+Nmap scan report for 192.168.200.20 (192.168.200.20) <br/>
+Host is up (0.00028s latency). <br/>
 
 PORT   STATE SERVICE
 22/tcp open  ssh
@@ -70,16 +68,16 @@ PORT   STATE SERVICE
 |   Supported authentication methods: 
 |     publickey
 |_    password
-MAC Address: 00:0C:29:93:A7:D4 (VMware)
+MAC Address: 00:0C:29:93:A7:D4 (VMware) <br/>
 
-NSE: Script Post-scanning.
-Initiating NSE at 06:51
-Completed NSE at 06:51, 0.00s elapsed
-Read data files from: /usr/share/nmap
+NSE: Script Post-scanning. <br/>
+Initiating NSE at 06:51 <br/>
+Completed NSE at 06:51, 0.00s elapsed <br/>
+Read data files from: /usr/share/nmap <br/>
 Nmap done: 1 IP address (1 host up) scanned in 0.41 seconds
-           Raw packets sent: 2 (72B) | Rcvd: 2 (72B)
+           Raw packets sent: 2 (72B) | Rcvd: 2 (72B) <br/>
 
-3.	Criar listas de usuários e senhas
+3.	**Criar listas de usuários e senhas**
 
 echo -e "user\nmsfadmin\nroot\nservice\nadmin\nsysadmin" > users.txt
 echo -e "123456\npassword\nqwerty\nmsfadmin\nadmin\npass123\npasswd" > pass.txt
