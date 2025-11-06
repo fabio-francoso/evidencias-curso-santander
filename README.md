@@ -1,4 +1,4 @@
-# SIMULANDO ATAQUE DE BRUTE FORCE
+# SIMULANDO ATAQUES DE BRUTE FORCE
 ### Repositorio criado para compartilhar as evidencias do curso Santander - Cibersegurança 2025
 
 1.	**Varredura de portas e versão do serviço**
