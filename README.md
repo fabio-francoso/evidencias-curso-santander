@@ -5,6 +5,8 @@
 
 `nmap -sV 192.168.200.20` <br/>
 
+![Saída da varreadura realizada para identificação das portas abertas e as versões dos serviços](/img/varredura_portas_abertas.png)
+
 nmap scan report for 192.168.200.20 (192.168.200.20) <br/>
 
 Host is up (0.0017s latency <br/>
