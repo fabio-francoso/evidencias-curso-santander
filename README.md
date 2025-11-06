@@ -7,41 +7,13 @@
 
 ![Saída da varreadura realizada para identificação das portas abertas e as versões dos serviços](/img/varredura_portas_abertas.png)
 
-nmap scan report for 192.168.200.20 (192.168.200.20) <br/>
-
-Host is up (0.0017s latency <br/>
-Not shown: 977 closed tcp ports (reset) <br/>
-
-PORT     STATE SERVICE     VERSION <br/>
-21/tcp   open  ftp         vsftpd 2.3.4 <br/>
-22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0) <br/>
-23/tcp   open  telnet      Linux telnetd <br/>
-25/tcp   open  smtp        Postfix smtpd <br/>
-53/tcp   open  domain      ISC BIND 9.4.2 <br/>
-80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2) <br/>
-111/tcp  open  rpcbind     2 (RPC #100000) <br/>
-139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP) <br/>
-445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP) <br/>
-512/tcp  open  exec        netkit-rsh rexecd <br/>
-513/tcp  open  login       OpenBSD or Solaris rlogind <br/>
-514/tcp  open  tcpwrapped <br/>
-1099/tcp open  java-rmi    GNU Classpath grmiregistry <br/>
-1524/tcp open  bindshell   Metasploitable root shell <br/>
-2049/tcp open  nfs         2-4 (RPC #100003) <br/>
-2121/tcp open  ftp         ProFTPD 1.3.1 <br/>
-3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5 <br/>
-5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7 <br/>
-5900/tcp open  vnc         VNC (protocol 3.3) <br/>
-6000/tcp open  X11         (access denied) <br/>
-6667/tcp open  irc         UnrealIRCd <br/>
-8009/tcp open  ajp13       Apache Jserv (Protocol v1.3) <br/>
-8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1 <br/>
-MAC Address: 00:0C:29:93:A7:D4 (VMware) <br/>
-Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel <br/>
+<br/>
 
 2.	**Varredura na porta 22 com o script “ssh-auth-methods” para identificar os tipos de autenticação que o host permite**
 
 `nmap -v -p22 --script=ssh-auth-methods -Pn 192.168.200.20` <br/>
+
+![Saída da varreadura realizada para identificação dos tipos de autenticação permitido](/img/identificar_tipo_autenticacao.png)
 
 Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower. <br/>
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-04 06:51 -03 <br/>
